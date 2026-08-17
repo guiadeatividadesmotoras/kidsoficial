@@ -252,49 +252,7 @@
       margin:0 auto 28px;
       text-align:center;
     }
-    .swipe-hint{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      color:#7C6A36;
-      font-weight:900;
-      font-size:12px;
-      margin-top:2px;
-    }
-    .demo-nav-wrap{position:relative}
-    .demo-nav{
-      display:flex;
-      gap:10px;
-      overflow-x:auto;
-      scrollbar-width:none;
-      -webkit-overflow-scrolling:touch;
-      scroll-snap-type:x proximity;
-      padding:8px 4px 15px;
-    }
-    .demo-nav::-webkit-scrollbar{display:none}
-    .demo-tab{
-      flex:0 0 auto;
-      scroll-snap-align:start;
-      appearance:none;
-      cursor:pointer;
-      border:1px solid var(--line);
-      background:#fff;
-      color:#53667A;
-      border-radius:999px;
-      padding:13px 18px;
-      font-weight:900;
-      white-space:nowrap;
-      box-shadow:0 6px 16px rgba(23,55,109,.06);
-      transition:.2s ease;
-    }
-    .demo-tab.active{
-      background:var(--navy);
-      border-color:var(--navy);
-      color:#fff;
-      transform:translateY(-2px);
-      box-shadow:0 9px 20px rgba(23,55,109,.18);
-    }
-    .demo-stage{
+.demo-stage{
       display:grid;
       grid-template-columns:1.2fr .8fr;
       gap:22px;
@@ -631,22 +589,7 @@
       font-weight:700;
       margin:0 0 22px;
     }
-    .testimonial-meta{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-    .testimonial-avatar{
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      flex:0 0 48px;
-      font-size:23px;
-      background:#EEF5FF;
-    }
-    .testimonial-role strong{
+.testimonial-role strong{
       display:block;
       color:var(--navy);
       font-size:14px;
@@ -856,36 +799,7 @@
       color:#53677B;
       font-size:13px;
     }
-
-    /* STICKY MOBILE */
-    .sticky{
-      display:none;
-      position:fixed;
-      z-index:80;
-      left:0;
-      right:0;
-      bottom:0;
-      padding:9px 12px calc(9px + env(safe-area-inset-bottom));
-      background:rgba(255,255,255,.96);
-      backdrop-filter:blur(12px);
-      border-top:1px solid var(--line);
-      box-shadow:0 -12px 30px rgba(23,55,109,.12);
-      transform:translateY(120%);
-      transition:.28s ease;
-    }
-    .sticky.show{transform:none}
-    .sticky-inner{display:flex;align-items:center;gap:10px}
-    .sticky-copy strong{display:block;font-size:13px}
-    .sticky-copy span{font-size:11px;color:#7B8998}
-    .sticky .btn{
-      min-height:46px;
-      padding:10px 14px;
-      margin-left:auto;
-      white-space:nowrap;
-      font-size:13px;
-    }
-
-    .reveal{
+.reveal{
       opacity:0;
       transform:translateY(16px);
       transition:opacity .62s ease,transform .62s ease;
@@ -921,12 +835,7 @@
       .hero .btn{width:100%}
       .delivery-note{font-size:11px}
       .problem-list{grid-template-columns:1fr}
-      .demo-nav{
-        margin-inline:-17px;
-        padding-inline:17px;
-      }
-      .swipe-hint{display:flex;justify-content:center;width:100%}
-      .video-shell{min-height:344px;padding:8px;border-radius:22px}
+.video-shell{min-height:344px;padding:8px;border-radius:22px}
       .video-shell video{min-height:328px;border-radius:17px}
       .video-placeholder{inset:8px;border-radius:17px}
       .play{width:67px;height:67px}
@@ -945,8 +854,6 @@
       .guarantee-box{display:block;text-align:center;padding:22px}
       .shield{margin:0 auto 15px}
       .final .btn{width:100%}
-      .sticky{display:block}
-      footer{padding-bottom:112px}
     }
   </style>
 </head>
@@ -1007,45 +914,42 @@
     <section id="demonstracao" class="section demo">
       <div class="container">
         <div class="demo-head reveal">
-          <span class="eyebrow">Veja por dentro</span>
-          <h2>Mãe, arraste os segmentos para o lado e toque na apostila que você quer ver por dentro.</h2>
+          <span class="eyebrow">Veja tudo por dentro</span>
+          <h2>Assista ao vídeo e conheça todos os módulos das Apostilas Adaptadas.</h2>
           <p class="lead">
-            Cada segmento abre um vídeo diferente para você conhecer as páginas, as atividades e o estilo daquele material antes de comprar.
+            Em poucos minutos você consegue ver como são os materiais de coordenação motora, percepção visual,
+            rotina, linguagem, números, formas, pareamento e associação antes de comprar.
           </p>
-          <div class="swipe-hint">← DESLIZE PARA VER OS OUTROS SEGMENTOS →</div>
-        </div>
-
-        <div class="demo-nav-wrap">
-          <div class="demo-nav reveal" role="tablist" aria-label="Segmentos das apostilas">
-            <button class="demo-tab active" type="button" data-demo="coordenacao">✏️ Coordenação Motora</button>
-            <button class="demo-tab" type="button" data-demo="percepcao">🧩 Percepção Visual</button>
-            <button class="demo-tab" type="button" data-demo="rotina">🗓️ Rotina Visual</button>
-            <button class="demo-tab" type="button" data-demo="silabas">🔤 Sílabas & Palavras</button>
-            <button class="demo-tab" type="button" data-demo="numeros">🔢 Números & Formas</button>
-            <button class="demo-tab" type="button" data-demo="pareamento">🔗 Pareamento & Associação</button>
-          </div>
         </div>
 
         <div class="demo-stage reveal">
           <div class="video-shell">
-            <video id="demoVideo" controls playsinline preload="metadata" aria-label="Vídeo da apostila selecionada"></video>
+            <video id="demoVideo" controls playsinline preload="metadata" aria-label="Vídeo mostrando todos os módulos das Apostilas Adaptadas">
+              <source src="assets/videos/apostilas-completo.mp4" type="video/mp4">
+            </video>
 
             <div class="video-placeholder" id="videoPlaceholder">
               <div class="play">▶</div>
-              <h3 id="placeholderTitle">Coordenação Motora</h3>
-              <p id="placeholderText">O vídeo desta apostila será exibido aqui.</p>
+              <h3>Veja todos os módulos por dentro</h3>
+              <p>O vídeo completo das Apostilas Adaptadas será exibido aqui.</p>
             </div>
           </div>
 
           <aside class="demo-info">
-            <span class="demo-badge" id="demoBadge">Coordenação Motora</span>
-            <h3 id="demoTitle">Veja exatamente o que você encontra nesta apostila.</h3>
-            <p id="demoDescription">Traçados, caminhos, linhas, formas e atividades visuais voltadas ao desenvolvimento de habilidades manuais.</p>
+            <span class="demo-badge" style="background:#7658C9">Pacote completo</span>
+            <h3>Um único vídeo para você entender tudo o que está incluído.</h3>
+            <p>
+              Veja as páginas reais, a variedade dos materiais e os diferentes tipos de atividades
+              disponíveis dentro do pacote.
+            </p>
 
-            <ul class="demo-list" id="demoList">
-              <li>Traçados e caminhos</li>
-              <li>Linhas, formas e movimentos</li>
-              <li>Atividades prontas para imprimir</li>
+            <ul class="demo-list">
+              <li>Coordenação motora e traçados</li>
+              <li>Percepção visual e pareamento</li>
+              <li>Quadros de rotina visual</li>
+              <li>Sílabas, palavras e alfabetização</li>
+              <li>Números, formas e cores</li>
+              <li>Atividades de associação</li>
             </ul>
 
             <a class="btn btn-primary" href="#oferta">QUERO ACESSAR O PACOTE COMPLETO</a>
@@ -1088,73 +992,54 @@
     <section class="section testimonials" id="comentarios">
       <div class="container">
         <div class="testimonials-head reveal">
-          <span class="eyebrow">Para diferentes rotinas</span>
-          <h2>Veja como o material pode fazer sentido para quem acompanha a aprendizagem de perto.</h2>
-          <p class="lead">Famílias, educadoras e profissionais podem aproveitar os materiais de maneiras diferentes, de acordo com a necessidade de cada contexto.</p>
+          <span class="eyebrow">Diferentes experiências de uso</span>
+          <h2>Veja exemplos de como mães podem perceber o uso dos materiais no dia a dia.</h2>
+          <p class="lead">
+            Os comentários abaixo são exemplos ilustrativos para mostrar diferentes formas de uso do produto.
+          </p>
         </div>
 
-        <div class="testimonial-shell reveal" id="testimonialCarousel" aria-label="Carrossel de comentários de exemplo">
+        <div class="testimonial-shell reveal" id="testimonialCarousel" aria-label="Carrossel de comentários ilustrativos">
           <article class="testimonial-card active">
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-quote">“O que mais gostei foi ter opções diferentes no mesmo lugar. Quando quero fazer algo com meu filho, consigo escolher uma atividade sem passar um tempão procurando.”</p>
-            <div class="testimonial-meta">
-              <div class="testimonial-avatar">👩‍👦</div>
-              <div class="testimonial-role"><strong>Mãe</strong><span>Uso em casa</span></div>
-            </div>
+            <div class="testimonial-role"><strong>Mariana Alves</strong><span>Mãe • comentário ilustrativo</span></div>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">“Na rotina da Educação Infantil, ter materiais visuais prontos ajuda muito na hora de variar as propostas e adaptar uma atividade para o que a turma precisa naquele dia.”</p>
-            <div class="testimonial-meta">
-              <div class="testimonial-avatar">👩‍🏫</div>
-              <div class="testimonial-role"><strong>Professora</strong><span>Educação Infantil</span></div>
-            </div>
+            <p class="testimonial-quote">“A parte de rotina visual foi a que mais me chamou atenção. Ficou muito mais fácil mostrar o que vem agora e o que vem depois durante o dia.”</p>
+            <div class="testimonial-role"><strong>Camila Ribeiro</strong><span>Mãe • comentário ilustrativo</span></div>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">“A parte de rotina visual é a que mais chamou minha atenção. É simples de entender e facilita muito quando quero mostrar o que vem agora e o que vem depois.”</p>
-            <div class="testimonial-meta">
-              <div class="testimonial-avatar">👨‍👧</div>
-              <div class="testimonial-role"><strong>Pai</strong><span>Uso em família</span></div>
-            </div>
+            <p class="testimonial-quote">“Eu queria atividades mais visuais e simples de aplicar. Gostei porque consigo imprimir só aquilo que realmente vou usar com meu filho naquele momento.”</p>
+            <div class="testimonial-role"><strong>Juliana Martins</strong><span>Mãe • comentário ilustrativo</span></div>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">“Gostei da variedade de percepção visual, pareamento e linguagem. Dá para selecionar atividades diferentes conforme o objetivo que estou trabalhando em cada encontro.”</p>
-            <div class="testimonial-meta">
-              <div class="testimonial-avatar">🧠</div>
-              <div class="testimonial-role"><strong>Psicopedagoga</strong><span>Recursos para atendimento</span></div>
-            </div>
+            <p class="testimonial-quote">“Ter materiais de percepção, linguagem, números e coordenação juntos facilita muito. Eu consigo variar sem precisar procurar em vários lugares diferentes.”</p>
+            <div class="testimonial-role"><strong>Renata Oliveira</strong><span>Mãe • comentário ilustrativo</span></div>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">“Para mim, o melhor é poder imprimir apenas o que vou usar. Não preciso preparar tudo do zero e consigo deixar algumas atividades prontas para a semana.”</p>
-            <div class="testimonial-meta">
-              <div class="testimonial-avatar">📚</div>
-              <div class="testimonial-role"><strong>Educadora</strong><span>Planejamento de atividades</span></div>
-            </div>
+            <p class="testimonial-quote">“Gostei principalmente de conseguir ver o material antes. Isso me ajudou a entender o que eu poderia usar em casa e quais atividades combinavam mais com meu filho.”</p>
+            <div class="testimonial-role"><strong>Patrícia Souza</strong><span>Mãe • comentário ilustrativo</span></div>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">“Os materiais visuais são úteis porque permitem escolher propostas mais concretas e objetivas. Gosto especialmente de poder combinar rotina, associação e atividades de linguagem.”</p>
-            <div class="testimonial-meta">
-              <div class="testimonial-avatar">💬</div>
-              <div class="testimonial-role"><strong>Profissional da área infantil</strong><span>Uso de recursos visuais</span></div>
-            </div>
+            <p class="testimonial-quote">“As atividades de pareamento e percepção visual foram as que mais me interessaram. São propostas simples e fáceis de encaixar na rotina sem complicar.”</p>
+            <div class="testimonial-role"><strong>Fernanda Costa</strong><span>Mãe • comentário ilustrativo</span></div>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-quote">“Eu queria algo que não fosse só mais um PDF perdido no celular. Ter vários tipos de atividade para escolher deixa muito mais fácil decidir o que fazer com minha filha.”</p>
-            <div class="testimonial-meta">
-              <div class="testimonial-avatar">👩‍👧</div>
-              <div class="testimonial-role"><strong>Mãe</strong><span>Atividades no dia a dia</span></div>
-            </div>
+            <div class="testimonial-role"><strong>Larissa Mendes</strong><span>Mãe • comentário ilustrativo</span></div>
           </article>
 
           <div class="testimonial-controls">
@@ -1164,7 +1049,8 @@
           </div>
 
           <p class="testimonial-disclosure">
-            Os textos acima são exemplos de comentários para apresentar os diferentes perfis de uso do produto e não devem ser interpretados como depoimentos reais de clientes específicos.
+            Os nomes e comentários acima são fictícios e servem apenas como exemplos ilustrativos de situações de uso.
+            Eles não representam depoimentos reais de clientes específicos.
           </p>
         </div>
       </div>
@@ -1299,16 +1185,6 @@
     </div>
   </footer>
 
-  <div class="sticky" id="sticky">
-    <div class="sticky-inner">
-      <div class="sticky-copy">
-        <strong>Pacote completo</strong>
-        <span>Entrega imediata</span>
-      </div>
-      <a class="btn btn-primary checkout-link" href="#">QUERO ACESSAR</a>
-    </div>
-  </div>
-
   <!-- TERMOS -->
   <div class="legal-modal" id="termsModal" aria-hidden="true">
     <div class="legal-card" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
@@ -1441,108 +1317,18 @@
       link.href = CHECKOUT_URL;
     });
 
-    const DEMOS = {
-      coordenacao:{
-        badge:"Coordenação Motora",
-        title:"Veja exatamente o que você encontra nesta apostila.",
-        description:"Traçados, caminhos, linhas, formas e atividades visuais voltadas ao desenvolvimento de habilidades manuais.",
-        bullets:["Traçados e caminhos","Linhas, formas e movimentos","Atividades prontas para imprimir"],
-        video:"assets/videos/coordenacao-motora.mp4",
-        color:"#2F75D5"
-      },
-      percepcao:{
-        badge:"Percepção Visual",
-        title:"Observe por dentro as atividades de percepção visual.",
-        description:"Materiais com pareamento, associação, reconhecimento, cores, formas, diferenças e desafios de observação.",
-        bullets:["Pareamento e associação","Cores, formas e diferenças","Atenção e observação visual"],
-        video:"assets/videos/percepcao-visual.mp4",
-        color:"#55AE5B"
-      },
-      rotina:{
-        badge:"Rotina Visual",
-        title:"Veja como são os materiais para organizar visualmente o dia.",
-        description:"Quadros e recursos que representam atividades da rotina, como manhã, escola, higiene, tarefas e noite.",
-        bullets:["Rotina da manhã e da noite","Casa, escola e higiene","Quadros e fichas visuais"],
-        video:"assets/videos/rotina-visual.mp4",
-        color:"#7658C9"
-      },
-      silabas:{
-        badge:"Sílabas & Palavras",
-        title:"Conheça as páginas de sílabas, letras e formação de palavras.",
-        description:"Atividades com sílabas, associação entre imagens e palavras e propostas visuais de leitura e escrita.",
-        bullets:["Sílabas e letras","Associação imagem e palavra","Formação de palavras"],
-        video:"assets/videos/silabas-palavras.mp4",
-        color:"#FF7B32"
-      },
-      numeros:{
-        badge:"Números & Formas",
-        title:"Veja por dentro as atividades de números, quantidades, formas e cores.",
-        description:"Páginas de contagem, reconhecimento numérico, formas geométricas, cores, sequência e associação.",
-        bullets:["Números e quantidades","Formas e cores","Sequência e associação"],
-        video:"assets/videos/numeros-formas.mp4",
-        color:"#F25F8B"
-      },
-      pareamento:{
-        badge:"Pareamento & Associação",
-        title:"Veja as atividades de ligar, combinar e encontrar os pares.",
-        description:"Materiais visuais com figuras, pares, associação e reconhecimento de elementos para diferentes propostas.",
-        bullets:["Encontre o par","Ligue os iguais","Associação visual"],
-        video:"assets/videos/pareamento-associacao.mp4",
-        color:"#2EC4B6"
-      }
-    };
-
     const video = document.getElementById("demoVideo");
     const placeholder = document.getElementById("videoPlaceholder");
-    const placeholderTitle = document.getElementById("placeholderTitle");
-    const placeholderText = document.getElementById("placeholderText");
-    const badge = document.getElementById("demoBadge");
-    const title = document.getElementById("demoTitle");
-    const description = document.getElementById("demoDescription");
-    const list = document.getElementById("demoList");
 
-    function selectDemo(key){
-      const item = DEMOS[key];
-      if(!item) return;
+    if(video){
+      const hidePlaceholder = () => placeholder && placeholder.classList.add("hidden");
+      const showPlaceholder = () => placeholder && placeholder.classList.remove("hidden");
 
-      document.querySelectorAll(".demo-tab").forEach(btn => {
-        const active = btn.dataset.demo === key;
-        btn.classList.toggle("active",active);
-        btn.setAttribute("aria-selected",active ? "true" : "false");
-      });
-
-      badge.textContent = item.badge;
-      badge.style.background = item.color;
-      title.textContent = item.title;
-      description.textContent = item.description;
-      list.innerHTML = item.bullets.map(text => `<li>${text}</li>`).join("");
-
-      placeholder.classList.remove("hidden");
-      placeholderTitle.textContent = item.badge;
-      placeholderText.textContent = "O vídeo desta apostila será exibido aqui.";
-
-      video.pause();
-      video.removeAttribute("src");
-      video.load();
-      video.src = item.video;
-
-      const canPlay = () => {
-        placeholder.classList.add("hidden");
-        video.removeEventListener("canplay",canPlay);
-      };
-
-      video.addEventListener("canplay",canPlay);
-      video.addEventListener("error",() => {
-        placeholder.classList.remove("hidden");
-        placeholderText.textContent = "O vídeo desta apostila será exibido aqui.";
-      },{once:true});
+      video.addEventListener("canplay", hidePlaceholder);
+      video.addEventListener("playing", hidePlaceholder);
+      video.addEventListener("error", showPlaceholder);
     }
 
-    document.querySelectorAll(".demo-tab").forEach(btn => {
-      btn.addEventListener("click",() => selectDemo(btn.dataset.demo));
-    });
-
-    selectDemo("coordenacao");
 
     // Reveal suave
     const observer = new IntersectionObserver(entries => {
@@ -1555,27 +1341,7 @@
     },{threshold:.12});
 
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-    // CTA fixo mobile
-    const sticky = document.getElementById("sticky");
-    const offer = document.getElementById("oferta");
-
-    function updateSticky(){
-      if(innerWidth > 680){
-        sticky.classList.remove("show");
-        return;
-      }
-      const r = offer.getBoundingClientRect();
-      const inOffer = r.top < innerHeight*.88 && r.bottom > 0;
-      sticky.classList.toggle("show",scrollY > 520 && !inOffer);
-    }
-
-    addEventListener("scroll",updateSticky,{passive:true});
-    addEventListener("resize",updateSticky);
-    updateSticky();
-
-
-    // Carrossel de comentários: troca automática a cada 7 segundos
+// Carrossel de comentários: troca automática a cada 7 segundos
     const testimonialCarousel = document.getElementById("testimonialCarousel");
     const testimonialCards = [...document.querySelectorAll(".testimonial-card")];
     const testimonialDots = document.getElementById("testimonialDots");
